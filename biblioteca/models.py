@@ -6,6 +6,7 @@ class Biblioteca(models.Model):
     fecha_creacion = models.DateField(null=True, blank=True)
     telefono = models.IntegerField(null=True, blank=True)
     nombre = models.CharField(max_length=200)
+    direccion = models.TextField()
     
 class Autor(models.Model):
     nombre = models.CharField(max_length=200)
@@ -27,13 +28,14 @@ class Libro(models.Model):
     )
     biblioteca = models.ForeignKey(Biblioteca, on_delete=models.CASCADE)
     autores = models.ManyToManyField(Autor)
-    
+    fecha_publicacion = models.DateField()   
 class Cliente(models.Model):
     nombre = models.CharField(max_length=200)
     apellidos = models.CharField(max_length=200)
     telefono = models.IntegerField(null=True, blank=True)
     email = models.CharField(max_length=200, unique=True)
     puntos = models.FloatField(default=5.0, db_column="puntos_biblioteca")
+    
     
 class DatosCliente(models.Model):
     direccion = models.TextField()
