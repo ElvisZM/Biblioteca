@@ -28,7 +28,8 @@ class Libro(models.Model):
     )
     biblioteca = models.ForeignKey(Biblioteca, on_delete=models.CASCADE)
     autores = models.ManyToManyField(Autor)
-    fecha_publicacion = models.DateField()   
+    fecha_publicacion = models.DateField()
+    descripcion = models.TextField()  
 class Cliente(models.Model):
     nombre = models.CharField(max_length=200)
     apellidos = models.CharField(max_length=200)
