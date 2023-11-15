@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/alumnado/Escritorio/Desarrollo_Servidor/DJANGO - GIT/ProyectoBiblioteca/Biblioteca/myvenv/bin/python3" "$0" "$@"
+'''exec' "/home/alumnado/Escritorio/Desarrollo_Servidor/DJANGO - GIT/ProyectoBiblioteca/Biblioteca/myvenv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

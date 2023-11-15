@@ -24,4 +24,6 @@ urlpatterns =[
     #path('cliente/cliente',views.clientes_registrados,name='clientes_registrados'),#el segundo elemento es el nombre de la funcion en el archivo views.py
     
     path('libros_no_prestados/', views.libros_no_prestados,name="libros_no_prestados"),
+    
+    path('crear_libro/', views.Libro_create,name="formulario_crear_libro"),
 ]
